@@ -1,0 +1,18 @@
+Posts (+Id_post, title, excerpt, id_autor, date_pub, featured_image, content, createdat, editdat, state, slug );
+
+Author (+Id_author, nickname, password, email, role, createdat , editdat );
+
+Categories (+Id_category, name, createdat, editdat );
+
+Tags (+Id_tag, name, createdat, editdat );
+
+Comment (+Id_comment, user, email, http, content, id_post );
+
+PostCat (+Id_post, +Id_category );
+
+PostTag (+Id_post, +Id_tag ;) 
+
+
+--Tarea de Investigación --
+
++Cargar un CSS u otro estilo dependiendo de la url que estemos utilizando o por la que estemos navegando.
