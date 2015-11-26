@@ -1,26 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<title></title>
-	<link href='https://fonts.googleapis.com/css?family=Merriweather:900italic' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css">
-	<link rel="stylesheet" href="css/styles.css">
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-	<style>
-	.carousel-inner  {
-
-      width: 70%;
-      margin: auto;
-  		
-  	}
-  </style>
-</head>
-<body>
-	<div class="menu">
-		<nav id="navigation_menu">
 			<ul class="nav_menu">
 				<li class="project"><a href="">Proyecto</a></li>
 				<li class="item"><a href="<?=$base_url?>">Inicio</a></li>
@@ -67,6 +44,17 @@
 	</div>
 	</div>
 	<hr>
+	<div class="container">
+	<h4>Buscar</h4>
+		<div class="input-group">
+			<input type="text" class="form-control">
+			<span class="input-group-btn">
+				<button class="btn btn-default" type="button">
+					<span class="glyphicon glyphicon-search"></span>
+				</button>
+			</span>
+		</div>
+	</div>
 	<div class="container">
 	<div class="main">
 		<div class="col-lg-4 category1">
