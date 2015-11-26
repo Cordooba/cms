@@ -65,8 +65,26 @@ footer p{
 
 .category {
 
-	padding-left: 300px;
+	padding-left: 20px;
 
+}
+
+.category1 {
+
+	display: inline-block;
+
+}
+
+.category2 {
+
+	display: inline-block;
+	
+}
+
+.category3 {
+
+	display: inline-block;
+	
 }
 
 .btn {
@@ -75,6 +93,6 @@ footer p{
 	display: inline-block;
 	padding: 6px 12px;
 	text-align: center;
-	margin-left: 400px;
+	margin-left: 85px;
 
 }

@@ -16,3 +16,8 @@ PostTag (+Id_post, +Id_tag ;)
 --Tarea de Investigación --
 
 +Cargar un CSS u otro estilo dependiendo de la url que estemos utilizando o por la que estemos navegando.
+
+Con @import:
+http://cybmeta.com/utilizando-la-regla-import
+
+POST => ARTICULO

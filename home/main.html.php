@@ -83,9 +83,5 @@
 		</div>
 	</div>
 	</div>
-	<hr>
-	<footer>
-		<p>&copy; Alejandro Córdoba Muñoz - <a href="#">Privacy</a> - <a href="#">Terms</a></p>
-	</footer>
 </body>
 </html>
