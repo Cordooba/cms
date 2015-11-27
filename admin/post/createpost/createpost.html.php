@@ -3,7 +3,7 @@
             <div class="container-fluid">
 
                 <!-- Page Heading -->
-                <div class="row">
+                <div class="container">
                     <div class="col-lg-12">
                         <h1 class="page-header">
                            Crear Artículos
@@ -21,37 +21,47 @@
                         </ol>
                     </div>
                 </div>
+            <div class="row">
+                <form action="" method="post">
+                <div class="form-group bar">
+                    <label for="featured_image">Imágen Principal :</label>
+                        <input type="text" class="form-control" name="featured_image" placeholder="Imágen">
+                </div>
+                <div class="form-group bar">
+                    <div class="checkbox">
+                        <label for="status"> Estado : <br>
+                            <input type="checkbox" value="">
+                                Visible
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">
+                                No Visible
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group bar">
+                    <label for="slug">Url :</label>
+                        <input type="text" class="form-control" name="slug" placeholder="Url...">
+                </div>
+                </form>
+            </div>    
                 <!-- /.row -->
            <form action="" method="post">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    <label for="title">Título :</label>
+                        <input type="text" class="form-control" name="title" placeholder="Título...">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    <label for="excerpt">Descripción :</label>
+                        <textarea class="form-control" name="excerpt" rows="3" placeholder="Descripción del articulo..."></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    <label for="content">Artículo :</label>
+                        <textarea class="form-control" name="content" rows="8" placeholder="Contenido del artículo..."></textarea>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                </div>
-                <button type="submit" class="btn btn-default">Confirm identity</button>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Añadir</button>
             </form>    
             </div>
             <!-- /.container-fluid -->

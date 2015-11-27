@@ -1,0 +1,18 @@
+.row {
+
+	position: fixed;
+    top: 51px;
+    right: 0;
+    width: 225px;
+    margin-right: -225px;
+    border: none;
+    border-radius: 0;
+    overflow-y: auto;
+    background-color: #222;
+    bottom: 0;
+    overflow-x: hidden;
+    padding-bottom: 40px;
+    float: right;
+    margin: 0;
+
+}

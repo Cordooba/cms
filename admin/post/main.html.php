@@ -22,7 +22,32 @@
             <div class="btn-new">
                 <a class="btn btn-primary" href="<?=$base_admin_path?>post/createpost/">Nuevo...</a>
             </div>
-
+            <div class="row">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Título</th>
+                            <th>Descripción</th>
+                            <th>Fecha de Publicación</th>
+                            <th>Fecha de Creación</th>
+                            <th>Autor</th>
+                            <th>Estado</th>
+                            <th>Editar</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><i class="glyphicon glyphicon-edit"></i></td>
+                            <td><i class="glyphicon glyphicon-trash"></i></td> 
+                        </tr>
+                </table>
+            </div>
             </div>
             <!-- /.container-fluid -->
 

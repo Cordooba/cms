@@ -13,6 +13,7 @@
       <li data-target="" data-slide-to="1"></li>
       <li data-target="" data-slide-to="2"></li>
       <li data-target="" data-slide-to="3"></li>
+      <li data-target="" data-slide-to="4"></li>
     </ol>
   	<!-- Wrapper for slides -->
   		<div class="carousel-inner" role="listbox">
@@ -28,6 +29,16 @@
     		</div>
     		<div class="item">
       			<img src="./assets/img/3.jpg" alt="">
+      				<div class="carousel-caption">
+      				</div>
+    		</div>
+    		<div class="item">
+      			<img src="./assets/img/7.jpg" alt="">
+      				<div class="carousel-caption">
+      				</div>
+    		</div>
+    		<div class="item">
+      			<img src="./assets/img/8.jpg" alt="">
       				<div class="carousel-caption">
       				</div>
     		</div>
