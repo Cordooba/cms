@@ -26,7 +26,7 @@
     <!-- Custom Fonts -->
     <link href="<?=$base_admin_path?>font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     
-    <link href="<?=$base_admin_path?>post/createpost/css/styles.css" rel="stylesheet">
+    <link href="<?=$base_admin_path?>css/styles.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

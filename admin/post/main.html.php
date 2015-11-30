@@ -20,10 +20,17 @@
                 </div>
                 <!-- /.row -->
             <div class="btn-new">
-                <a class="btn btn-primary" href="<?=$base_admin_path?>post/createpost/">Nuevo...</a>
+                <a class="btn btn-primary btn-lg btn-block btn-new-post" href="<?=$base_admin_path?>post/createpost/">Nuevo...</a>
             </div>
             <div class="row">
                 <table class="table table-striped">
+                <?php if (empty($listOfPost)) :?>
+                        <thead>
+                            <tr>
+                                <th>Sin artículos...</th>
+                            </tr>
+                        </thead>
+                    <?php else: ?>   
                     <thead>
                         <tr>
                             <th>Título</th>
@@ -36,16 +43,19 @@
                             <th>Eliminar</th>
                         </tr>
                     </thead>
+                    <?php foreach($listOfPost as $list) :?>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td><?=$list['title']?></td>
+                            <td><?=$list['excerpt']?></td>
+                            <td><?=$list['date_pub']?></td>
+                            <td><?=$list['createdat']?></td>
+                            <td><?=$list['id_author']?></td>
+                            <td><?=$list['state']?></td>
                             <td><i class="glyphicon glyphicon-edit"></i></td>
                             <td><i class="glyphicon glyphicon-trash"></i></td> 
                         </tr>
+                    <?php endforeach; ?>    
+                <?php endif; ?>        
                 </table>
             </div>
             </div>

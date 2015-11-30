@@ -1,6 +1,6 @@
 <?php 
  
-require_once(__ROOT__.'/app/datadb.php');
+require_once(dirname(dirname(__FILE__)).'/app/datadb.php');
 
 try{
 

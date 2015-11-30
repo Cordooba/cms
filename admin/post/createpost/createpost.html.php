@@ -21,48 +21,55 @@
                         </ol>
                     </div>
                 </div>
-            <div class="row">
-                <form action="" method="post">
-                <div class="form-group bar">
-                    <label for="featured_image">Imágen Principal :</label>
-                        <input type="text" class="form-control" name="featured_image" placeholder="Imágen">
-                </div>
-                <div class="form-group bar">
-                    <div class="checkbox">
-                        <label for="status"> Estado : <br>
-                            <input type="checkbox" value="">
-                                Visible
-                        </label>
+                <div class="container">
+                    <div class="col-lg-8">
+                        <form action="" method="post">
+                    <?php if ( empty($errores['errorTittle']) ) : ?>
+                    <div class="form-group">
+                        <label for="title">Título :</label>
+                            <input type="text" class="form-control" name="title" placeholder="Título..." value="<?php if ( isset($title) ) echo $title ;?>">
                     </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" value="">
-                                No Visible
-                        </label>
+                    <?php else : ?>
+                        <div class="form-group has-error has-feedback">
+                            <label class="control-label" for="title">Título :</label>
+                            <input type="text" class="form-control" id="title" name="title" placeholder="Título..." aria-describedby="inputError2Status">
+                            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                            <span id="inputError2Status" class="sr-only">(error)</span>
+                        </div>
+                    <?php endif ; ?>
+                    <div class="form-group">
+                        <label for="excerpt">Descripción :</label>
+                            <textarea class="form-control" name="excerpt" rows="3" placeholder="Descripción del articulo..." value="<?php if ( isset($excerpt) ) echo $excerpt ;?>"></textarea>
                     </div>
-                </div>
-                <div class="form-group bar">
-                    <label for="slug">Url :</label>
-                        <input type="text" class="form-control" name="slug" placeholder="Url...">
-                </div>
-                </form>
-            </div>    
+                     <div class="form-group">
+                        <label for="content">Artículo :</label>
+                            <textarea class="form-control" name="content" rows="8" placeholder="Contenido del artículo..." value="<?php if ( isset($content) ) echo $content ;?>"></textarea>
+                     </div>
+                     <div class="form-group">
+                                <label for="slug">Url :</label>
+                                    <input type="text" class="form-control" name="slug" placeholder="Url..." value="<?php if ( isset($slug) ) echo $slug ;?>">
+                            </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Añadir</button>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <form action="" method="post">
+                            <div class="form-group bar">
+                                <label for="featured_image" class="featured_image">Imágen Principal:</label>
+                                    <input type="text" class="form-control image" name="featured_image" placeholder="Imágen" value="<?php if ( isset($featured_image) ) echo $featured_image ;?>">
+                            </div>
+                            <div class="form-group bar">
+                            <label for="" class="status">Estado:</label>
+                                <select name="status" id="status" class="status">
+                                    <option value="published">Visible</option>
+                                    <option value="draft">No Visible</option>
+                                </select>
+                            </div>
+                        </div>
+                        </form> 
+            </div>   
                 <!-- /.row -->
-           <form action="" method="post">
-                <div class="form-group">
-                    <label for="title">Título :</label>
-                        <input type="text" class="form-control" name="title" placeholder="Título...">
-                </div>
-                <div class="form-group">
-                    <label for="excerpt">Descripción :</label>
-                        <textarea class="form-control" name="excerpt" rows="3" placeholder="Descripción del articulo..."></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="content">Artículo :</label>
-                        <textarea class="form-control" name="content" rows="8" placeholder="Contenido del artículo..."></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Añadir</button>
-            </form>    
+              
             </div>
             <!-- /.container-fluid -->
 

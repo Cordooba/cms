@@ -16,3 +16,23 @@
     margin: 0;
 
 }
+
+.image {
+
+    padding: 15px 95px;
+
+}
+
+.featured_image {
+
+    font-size: 20px;
+    color: #FFF;
+
+}
+
+.status {
+
+    font-size: 20px;
+    color: #FFF;
+
+}
