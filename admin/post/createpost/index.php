@@ -6,6 +6,7 @@
 	require_once $base_path.'admin/templates/headercreate.php';
 	require_once 'createpost.html.php';
 
+
 	if ( isset($_POST) ) {
 
 		$title = htmlspecialchars($_POST['title'], ENT_QUOTES, 'UTF-8');

@@ -19,10 +19,27 @@
                     </div>
                 </div>
                 <!-- /.row -->
-            <div class="btn-new">
-                <a class="btn btn-primary btn-lg btn-block btn-new-post" href="<?=$base_admin_path?>author/createauthor/">Nuevo...</a>
-            </div>
-            <div class="row">
+            <div class="btn-new col-lg-3">
+            <h2>Añadir Autor:</h2>
+                <form action="?add" method="POST">
+                             <div class="form-group">
+                                <label for="name">Nombre :</label>
+                                    <input type="text" class="form-control" name="nickname" placeholder="Nombre del autor...">
+                                <label for="pswd">Contraseña :</label>    
+                                    <input type="text" class="form-control" name="password" placeholder="Contraseña del autor...">
+                                <label for="mail">E-mail :</label>    
+                                    <input type="text" class="form-control" name="email" placeholder="E-mail...">
+                                <label for="rol">Rol :</label>    
+                                    <select class="form-control" name="role">
+                                        <option value="Admin">Admin</option>
+                                        <option value="Editor">Editor</option>
+                                    </select>    
+                            </div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Añadir</button>
+                        </form>
+            </div>    
+            <div class="row col-lg-9">
+            <h2>Lista de Autores</h2>
                 <table class="table table-striped">
                     <?php if (empty($listOfAuthor)) :?>
                         <thead>

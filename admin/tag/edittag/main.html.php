@@ -1,4 +1,4 @@
-        <div id="page-wrapper">
+<div id="page-wrapper">
 
             <div class="container-fluid">
 
@@ -6,34 +6,31 @@
                 <div class="container">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                           Crear Categoría
+                           Editar Etiqueta
                         </h1>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i><a href="<?=$base_admin_path?>"> Administración</a>
                             </li>
                             <li>
-                                <i class="glyphicon glyphicon-folder-open"></i></i><a href="<?=$base_admin_path?>category"> Categorías </a>
+                                <i class="glyphicon glyphicon-tag"></i></i><a href="<?=$base_admin_path?>tag"> Etiquetas </a>
                             </li>
                             <li>
-                                <i class="glyphicon glyphicon-plus-sign"></i> Crear Categoría
+                                <i class="glyphicon glyphicon-plus-sign"></i> Editar Etiqueta
                             </li>
                         </ol>
                     </div>
                 </div>
                 <div>
                     <div class="col-lg-12">
-                        <form action="" method="POST">
+                        <form action="?updateTag" method="POST">
                              <div class="form-group">
                                 <label for="name">Nombre :</label>
-                                    <?php if ( !isset($errores['errorName']) ) :?>
-                                    <input type="text" class="form-control" name="name" placeholder="Nombre de la categoria...">
-                                    <?php else :?>
-                                    <input type="text" class="form-control" name="name" aria-describedby="inputError2Status">
-                                    <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
-                                    <span id="inputError2Status" class="sr-only">(error)</span>
-                                    <?php endif; ?>
+                                <input type="text" class="form-control" name="name" placeholder="Nombre de la etiqueta..." value="<?php if (isset($tag['name'])) echo $tag['name']; ?>">
                             </div>
+                            <div class="form-group">
+                                <input type="hidden" name="id" value="<?=$tag['id']?>">
+                            </div>    
                                 <button type="submit" class="btn btn-primary btn-lg btn-block">Añadir</button>
                         </form>
                     </div> 

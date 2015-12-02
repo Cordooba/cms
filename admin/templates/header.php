@@ -1,6 +1,45 @@
+<?php
+
+    $active = [
+        'articulos' => '',
+        'categorias' => '',
+        'etiquetas' => '',
+        'autores' => '',
+        'comentarios' => ''
+
+    ];
+
+    if ( strpos($_SERVER['REQUEST_URI'], 'post') !== false ) {
+
+        $active['articulos'] = 'class="active"';
+        $info['icon'] = 'glyphicon glyphicon-file';
+
+    }else if ( strpos($_SERVER['REQUEST_URI'], 'category') !== false ) {
+
+        $active['categorias'] = 'class="active"';
+        $info['icon'] = 'glyphicon glyphicon-folder-open';
+
+    }else if ( strpos($_SERVER['REQUEST_URI'], 'tag') !== false ) {
+
+        $active['etiquetas'] = 'class="active"';
+        $info['icon'] = 'glyphicon glyphicon-tag';
+
+    }else if ( strpos($_SERVER['REQUEST_URI'], 'author') !== false ) {
+
+        $active['autores'] = 'class="active"';
+        $info['icon'] = 'glyphicon glyphicon-user';
+
+    }else if ( strpos($_SERVER['REQUEST_URI'], 'comment') !== false  ) {
+
+        $active['comentarios'] = 'class="active"';
+        $info['icon'] = 'glyphicon glyphicon-pencil';
+
+    }         
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 
     <meta charset="utf-8">
@@ -67,19 +106,19 @@
 
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li>
+                    <li <?=$active['articulos']?>>
                         <a href="<?=$base_admin_path?>post"><i class="glyphicon glyphicon-file"></i> Artículos</a>
                     </li>
-                    <li>
+                    <li <?=$active['categorias']?>>
                         <a href="<?=$base_admin_path?>category"><i class="glyphicon glyphicon-folder-open"></i>   Categorías</a>
                     </li>
-                    <li>
+                    <li <?=$active['etiquetas']?>>
                         <a href="<?=$base_admin_path?>tag"><i class="glyphicon glyphicon-tag"></i> Etiquetas</a>
                     </li>
-                    <li>
+                    <li <?=$active['autores']?>>
                         <a href="<?=$base_admin_path?>author"><i class="glyphicon glyphicon-user"></i> Autores</a>
                     </li>
-                    <li>
+                    <li <?=$active['comentarios']?>>
                         <a href="<?=$base_admin_path?>comment"><i class="glyphicon glyphicon-pencil"></i> Comentarios</a>
                     </li>
                 </ul>

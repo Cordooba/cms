@@ -3,9 +3,26 @@
 	require_once '../../app/info.php';
 	require_once '../../db/connectdb.php';
 
-	try {
+	if (isset($_GET['edit'])) {
+		// Muestro la vista para editar la categoría
+
+	}
+
+	if (isset($_GET['delete'])) {
+		// Borrar la categoría
 		
-		$sql = "SELECT * FROM posts;";
+	}
+
+	if ( isset($_GET['add']) ) {
+
+		require_once 'createpost.html.php';
+
+	}	
+
+	try {
+
+		$sql = "SELECT posts.title, posts.excerpt, posts.date_pub, posts.createdat, author.nickname, 
+		posts.state FROM posts LEFT JOIN author ON posts.id_author = author.id;";
 
 		$ps = $pdo -> prepare($sql);
 

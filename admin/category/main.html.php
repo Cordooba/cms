@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                           Categoías
+                           Categorías
                         </h1>
                         <ol class="breadcrumb">
                             <li>
@@ -19,10 +19,20 @@
                     </div>
                 </div>
                 <!-- /.row -->
-            <div class="btn-new">
-                <a class="btn btn-primary btn-lg btn-block btn-new-post" href="<?=$base_admin_path?>category/createcategory/">Nuevo...</a>
-            </div>
-            <div class="row">
+            <div class="btn-new col-lg-6">
+            <h2>Añadir categorías:</h2>
+            <form action="?add" method="POST">
+                <div class="form-group">
+                    <label for="name">Nombre :</label>
+                    <input type="text" class="form-control" name="name" placeholder="Nombre de la categoria...">
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary btn-lg btn-block btn-new-post" value="Nuevo...">
+                </div>
+            </form>    
+            </div>    
+            <div class="row col-lg-6">
+                <h2>Lista de Categorías</h2>
                 <table class="table table-striped">
                     <?php if (empty($listOfCategories)) :?>
                         <thead>
@@ -41,7 +51,12 @@
                         <?php foreach($listOfCategories as $list) :?>
                         <tr>
                             <td><?=$list['name']?></td>
-                            <td><a href="<?=$base_admin_path?>category/editcategory"><i class="glyphicon glyphicon-edit"></i></a></td>
+                            <td>
+                                <form action="?edit" method="post">
+                                        <input type="hidden" name="id" value="<?=$list['id']?>">
+                                        <button type="submit" class="btn btn-link btn-sm listiconbutton"><i class="glyphicon glyphicon-edit"></i></button>
+                                </form>
+                            </td>
                             <td><i class="glyphicon glyphicon-trash"></i></td>
                         </tr>
                         <?php endforeach; ?> 

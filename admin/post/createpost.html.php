@@ -23,7 +23,7 @@
                 </div>
                 <div class="container">
                     <div class="col-lg-8">
-                        <form action="" method="post">
+                    <form action="" method="post">
                     <?php if ( empty($errores['errorTittle']) ) : ?>
                     <div class="form-group">
                         <label for="title">Título :</label>

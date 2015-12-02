@@ -19,9 +19,7 @@
                     </div>
                 </div>
                 <!-- /.row -->
-            <div class="btn-new">
-                <a class="btn btn-primary btn-lg btn-block btn-new-post" href="<?=$base_admin_path?>post/createpost/">Nuevo...</a>
-            </div>
+                <h2>Lista de Artículos</h2>
             <div class="row">
                 <table class="table table-striped">
                 <?php if (empty($listOfPost)) :?>
@@ -49,7 +47,7 @@
                             <td><?=$list['excerpt']?></td>
                             <td><?=$list['date_pub']?></td>
                             <td><?=$list['createdat']?></td>
-                            <td><?=$list['id_author']?></td>
+                            <td><?=$list['nickname']?></td>
                             <td><?=$list['state']?></td>
                             <td><i class="glyphicon glyphicon-edit"></i></td>
                             <td><i class="glyphicon glyphicon-trash"></i></td> 
@@ -58,6 +56,11 @@
                 <?php endif; ?>        
                 </table>
             </div>
+            <div>
+            <form action="?add" method="POST">     
+                <input type="submit" class="btn btn-primary btn-lg btn-new-post" value="Nuevo...">
+                </form>
+            </div>    
             </div>
             <!-- /.container-fluid -->
 
